@@ -4,7 +4,9 @@
 namespace App\controller;
 
 
-class IndexController
+use System\engine\Controller;
+
+class IndexController extends Controller
 {
     public function __construct(){
 
