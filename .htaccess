@@ -1,0 +1,34 @@
+#While filenames are generally case-insensitive on Windows,
+#URLs are still treated internally as case-sensitive before they are mapped to the filesystem.
+#For example, the <Location>, Alias, and ProxyPass directives all use case-sensitive arguments.
+#For this reason, it is particularly important to use the <Directory> directive when attempting
+#to limit access to content in the filesystem, since this directive applies to any content in a directory,
+#regardless of how it is accessed. If you wish to assure that only lowercase is used in URLs, you can use something like:
+
+#RewriteEngine On
+
+#RewriteMap lowercase int:tolower
+#RewriteCond "%{REQUEST_URI}" "[A-Z]"
+#RewriteRule "(.*)" "${lowercase:$1}" [R,L]
+
+# Экранирование кавычек отключено
+php_flag magic_qoutes_gpc off
+
+# Язык
+AddDefaultCharset utf-8
+
+# Запуск файла по умолчанию
+DirectoryIndex index.php
+
+# Единая точка входа
+RewriteEngine On
+# Если это не фаил
+RewriteCond %{REQUEST_FILENAME} !-f
+# Если это не папка
+#RewriteCond %{REQUEST_FILENAME} !-d
+
+#RewriteCond %{SCRIPT_FILENAME} -d [OR]
+#RewriteCond %{SCRIPT_FILENAME} -f
+
+#RewriteRule ^(.*)$ index.php
+RewriteRule ^(.*) index.php

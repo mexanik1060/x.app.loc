@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Devart (www.devart.com), the Project File -->
+<!-- Modifying this generated file will probably render it invalid -->
+<DatabaseProject Version="1.0.1" Guid="3deb9241-7c20-484c-a6d6-7f6009807722">
+  <Provider Guid="59f90733-4d68-4fdf-82a7-f0fcbf5460aa" />
+  <Include>
+    <Folder Name="Таблицы" />
+    <Folder Name="Представления" />
+    <Folder Name="Процедуры" />
+    <Folder Name="Функции" />
+    <Folder Name="Триггеры" />
+    <Folder Name="События" />
+    <File RelPath="" Link=".\PostDeployment.sql" />
+    <File RelPath="" Link=".\PreDeployment.sql" />
+  </Include>
+  <Configurations Active="По умолчанию">
+    <Configuration Name="По умолчанию" CheckReferences="True" IgnoreErrors="False" OutputPath="" Target="" OutputType="SingleFile" KeepOriginalObjects="True" RecreateObjects="False" RecreateDatabase="False" ServerVersion="8.0.19" Database="dbkro" UseRegions="False" FullPaths="False" Definer="CURRENT_USER" ScriptDelimiter="$$" StorageEngine="INNODB" Collation="utf8mb4_0900_ai_ci" ConvertToLowercase="True" DefinerEffect="Keep" InnoDbDefaultRowFormat="dynamic">
+      <Connection Name="HOST_NEW_v8" Category="97d28b16-2c45-4ff7-8a1c-5e257e1fcf81" ConnectionString="User Id=root;Host=localhost;Character Set=utf8" />
+      <Build>
+        <File RelPath="" Name="PreDeployment.sql" BuildAction="Build" />
+        <File RelPath="" Name="PostDeployment.sql" BuildAction="Build" />
+      </Build>
+    </Configuration>
+  </Configurations>
+</DatabaseProject>

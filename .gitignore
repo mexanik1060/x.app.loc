@@ -1,0 +1,13 @@
+# IntelliJ project files
+
+app/view/default
+system/storage/vendor
+archive
+phpinfo.php
+xdebug.php
+composer.loc
+composer.phar
+dbtest.php
+i.php
+WORK_PLANE.md
+x.php

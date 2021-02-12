@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Devart (www.devart.com), the Project Options File -->
+<!-- Modifying this generated file will probably render it invalid -->
+<Options Version="3.0">
+  <Documents>
+    <Document Moniker="Table:dbkro.sys_access_rights(HOST_NEW_v8)" ActiveView="Data" Factory="{a8f0bf36-c3f8-4ecd-a6c9-370f408e56e6}" Active="True">
+      <Persist>
+        <Pinned>True</Pinned>
+      </Persist>
+    </Document>
+  </Documents>
+  <Services>
+    <Service GUID="{811fba21-97c2-44b6-8c1c-eae1f1315f2d}">
+      <Persist />
+    </Service>
+    <Service GUID="{e86507ae-fc27-47e0-925b-3c3e655520d4}">
+      <Persist>
+        <Configurations>
+          <Active>По умолчанию</Active>
+        </Configurations>
+      </Persist>
+    </Service>
+  </Services>
+</Options>

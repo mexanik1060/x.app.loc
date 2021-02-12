@@ -1,0 +1,48 @@
+{
+  "name": "x.app/x.app",
+  "type": "project",
+  "description": "My_app_test",
+  "keywords": ["my_app_test", "ecommerce", "framework", "opensource"],
+  "homepage": "http://x.app.loc/",
+  "license": "GPL-3.0+",
+  "config": {
+    "vendor-dir": "system/storage/vendor"
+  },
+
+  "require": {
+    "ext-pdo": "*",
+    "php": ">=8.0",
+    "symfony/config": ">=v5.2.2",
+    "symfony/http-foundation": ">=5.2.2",
+    "symfony/routing": ">=5.2.2",
+    "symfony/yaml": "~5.2.2",
+    "twig/twig": "^3.2.1"
+
+  },
+
+  "autoload": {
+    "psr-4": {
+      "Admin\\": "admin/",
+      "App\\": "app/",
+      "System\\": "system/",
+      "Install\\": "install/"
+    }
+
+  },
+  "require-dev": {
+    "ext-mysqli": "*"
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
