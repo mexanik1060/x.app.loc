@@ -33,3 +33,5 @@ try {
 $db = new DBPDO(DB_DRIVER, DB_DBNAME, DB_HOSTNAME, DB_USERNAME, DB_PASSWORD, DB_PORT);
 $db->dbIsConnection();
 
+require_once 'tests/index.php';
+

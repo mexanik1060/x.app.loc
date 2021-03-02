@@ -31,7 +31,7 @@ abstract class Controller
             $object->invoke(new $controller, $args);
 
         } catch (\ReflectionException $e) {
-            throw new RouteExceptions($e);
+            throw new RouteExceptions($e->getMessage());
 
         }
 
