@@ -1,8 +1,9 @@
 # IntelliJ project files
 
-app/view/default
+
 system/storage/vendor
-archive
+archive/
+tests/
 phpinfo.php
 xdebug.php
 composer.loc

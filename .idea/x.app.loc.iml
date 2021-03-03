@@ -19,6 +19,9 @@
       <excludeFolder url="file://$MODULE_DIR$/system/storage/vendor/twig/twig" />
       <excludeFolder url="file://$MODULE_DIR$/system/storage/vendor/symfony/polyfill-ctype" />
       <excludeFolder url="file://$MODULE_DIR$/system/storage/vendor/symfony/routing" />
+      <excludeFolder url="file://$MODULE_DIR$/app/view/default" />
+      <excludeFolder url="file://$MODULE_DIR$/system/storage/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/archive" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

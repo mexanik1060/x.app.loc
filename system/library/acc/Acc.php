@@ -44,7 +44,8 @@ class Acc
 
     public function minusDebit($inputSum): int
     {
-       return $this->initialSumDebit - $inputSum;
+
+        return $this->initialSumDebit - $inputSum;
     }
 
     public function plusCredit($inputSum): int
@@ -61,26 +62,35 @@ class Acc
      * Определить Сальдо-конечное в Активном счете:
      * С-доН + итог оборота по Дебету(+) и минус итог оборота по Кредиту
      *
-     * @param $data
+     * @param $InitialDebitBalance
      * @return int
      */
-    #[Pure] public function finalBalanceDebit($data): int
+    #[Pure] public function finalBalanceDebit($InitialDebitBalance): int
     {
-        return $this->initialSumDebit + $this->plusDebit($data) - $this->plusCredit($data);
+        return $this->initialSumDebit + $this->plusDebit($InitialDebitBalance) - $this->plusCredit($InitialDebitBalance);
+    }
+
+    #[Pure] public function finalBalanceCredit($InitialCreditBalance): int
+    {
+        return $this->initialSumDebit + $this->plusDebit($InitialCreditBalance) - $this->plusCredit($InitialCreditBalance);
     }
 
     /**
      * Создает  и  записывает  бухгалтерскую  проводку
      *
-     * @param mixed $acc_d код дебетового  счета или null
-     * @param mixed $acc_c код кредитового  счета или null
+     * @param mixed $paramDebit код дебетового  счета или null
+     * @param mixed $paramCredit код кредитового  счета или null
      * @param mixed $amount Сумма (в копейках)  Отрицательное  значение выполняет сторнирование.
      * @param mixed $document_id документ-основание
      *
      */
 
-    public function accEntry($paramD, $paramK)
+    public function accEntry($paramDebit, $paramCredit)
     {
+        $sqlDebit = '';
+        $sqlCredit = '';
+
+
 
     }
 

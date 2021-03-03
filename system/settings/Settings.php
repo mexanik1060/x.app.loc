@@ -12,13 +12,13 @@ class Settings
     //Свойства маршрутов
     private array $routes =
         [
-            'admin' =>  //Административная часть  http://x.app.loc/admin/controller/nameController/id/1 http://x.app.loc/admin/controller/goods/getGoods/sale
+            'admin' =>  //Административная часть  http://x.app.loc/admin/controller/getAddUser/id/1 http://x.app.loc/admin/controller/goods/getGoods/sale
                 [
                     'alias' => 'admin',
                     'path' => 'admin/controller/',
                     'hrUrl' => false,
                     'routes' => [
-                        //'users' => 'user/getAddUser/saleAdd',
+                        'users' => 'user/getAddUser/saleAdd',
                     ],
                 ],
             'settings' =>
@@ -31,12 +31,12 @@ class Settings
                     'hrUrl' => false,
                     'dir' => false,
                 ],
-            'user' =>  //Пользовательская часть
+            'app' =>  //Пользовательская часть
                 [
                     'path' => 'app/controller/',
                     'hrUrl' => true,
                     'routes' => [
-                        //'папка' => 'alias/ходные данные/выходные двнные в шаблон'
+                        //'папка' => 'alias/входные данные/выходные двнные в шаблон'
                         //'personnel' => 'Test',
 
                     ],

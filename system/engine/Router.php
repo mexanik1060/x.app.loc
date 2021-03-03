@@ -86,10 +86,10 @@ class Router extends Controller
             } else {
 
                 $hrUrl = $this->routes['user']['hrUrl'];
-                $this->controller = $this->routes['user']['path'];
+                $this->controller = $this->routes['app']['path'];
 
-                //user
-                $route = 'user';
+                //Пользовательская часть
+                $route = 'app';
             }
 
             $this->createRoute($route, $url);
@@ -136,9 +136,12 @@ class Router extends Controller
             if ($this->routes[$var]['routes'][$arr[0]]) {
                 $route = explode('/', $this->routes[$var]['routes'][$arr[0]]);
 
-                $this->controller .= ucfirst($route[0] . 'Controller');// 'Controller' нужно убрать если не будет находить контроллер по имени - .
+                 $this->controller .= ucfirst($route[0] . 'Controller');// 'Controller' нужно убрать если не будет находить контроллер по имени - .
+                //$this->controller .= ucfirst($route[0] );
+
             } else {
                 $this->controller .= ucfirst($arr[0] . 'Controller');// 'Controller' нужно убрать если не будет находить контроллер по имени - .
+                //$this->controller .= ucfirst($arr[0]);
             }
         } else {
             $this->controller .= $this->routes['default']['controller'];
