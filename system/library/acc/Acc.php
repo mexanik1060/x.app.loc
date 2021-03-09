@@ -65,14 +65,14 @@ class Acc
      * @param $InitialDebitBalance
      * @return int
      */
-    #[Pure] public function finalBalanceDebit($InitialDebitBalance): int
+    #[Pure] public function finalBalanceDebitActive($InitialDebitBalance): int
     {
         return $this->initialSumDebit + $this->plusDebit($InitialDebitBalance) - $this->plusCredit($InitialDebitBalance);
     }
 
-    #[Pure] public function finalBalanceCredit($InitialCreditBalance): int
+    #[Pure] public function finalBalanceCreditActive($InitialCreditBalance): int
     {
-        return $this->initialSumDebit + $this->plusDebit($InitialCreditBalance) - $this->plusCredit($InitialCreditBalance);
+        return $this->initialSumCredit + $this->plusDebit($InitialCreditBalance) - $this->plusCredit($InitialCreditBalance);
     }
 
     /**
