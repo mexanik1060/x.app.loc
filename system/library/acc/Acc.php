@@ -58,6 +58,30 @@ class Acc
         return $this->initialSumCredit - $inputSum;
     }
 
+
+    /**
+     * Оборот по Дебиту Активные счета
+     *
+     *
+     */
+
+    public function debitTurnoverActiveAccounts($activeAccounts)
+    {
+
+    }
+
+    /**
+     * Оборот по кредиту Пассивные счета
+     *
+     */
+    public function creditTurnoverPassiveAccounts($passiveAccounts)
+    {
+
+    }
+
+
+
+
     /**
      * Определить Сальдо-конечное в Активном счете:
      * С-доН + итог оборота по Дебету(+) и минус итог оборота по Кредиту
@@ -65,14 +89,22 @@ class Acc
      * @param $InitialDebitBalance
      * @return int
      */
-    #[Pure] public function finalBalanceDebitActive($InitialDebitBalance): int
+    #[Pure] public function finalBalanceActive($InitialDebitBalance): int
     {
         return $this->initialSumDebit + $this->plusDebit($InitialDebitBalance) - $this->plusCredit($InitialDebitBalance);
     }
 
-    #[Pure] public function finalBalanceCreditActive($InitialCreditBalance): int
+    /**
+     * Определить Сальдо-конечное в Пассивном счете:
+     * С-доН + итог оборота по Кредиту(+) и минус итог оборота по Дебиту
+     *
+     * @param $InitialCreditBalance
+     * @return int
+     */
+
+    #[Pure] public function finalBalancePassive($InitialCreditBalance): int
     {
-        return $this->initialSumCredit + $this->plusDebit($InitialCreditBalance) - $this->plusCredit($InitialCreditBalance);
+        return $this->initialSumCredit + $this->plusCredit($InitialCreditBalance) - $this->plusCredit($InitialCreditBalance);
     }
 
     /**

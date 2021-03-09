@@ -85,7 +85,7 @@ class Router extends Controller
                 // Конец административной панели.
             } else {
 
-                $hrUrl = $this->routes['user']['hrUrl'];
+                $hrUrl = $this->routes['app']['hrUrl'];
                 $this->controller = $this->routes['app']['path'];
 
                 //Пользовательская часть
