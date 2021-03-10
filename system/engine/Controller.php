@@ -4,6 +4,7 @@
 namespace System\engine;
 
 
+use core\base\exceptions\RouteException;
 use JetBrains\PhpStorm\NoReturn;
 use System\exceptions\RouteExceptions;
 
@@ -62,15 +63,23 @@ abstract class Controller
     /**
      * Шаблонизатор, мне нужен TWIG
      *
-     * @param string $path
-     * @param array $parameters
+     *
      */
     protected function render($path = '', $parameters = [])
     {
+        extract($parameters);
 
+        if(!$path){
+            $path = DIR_TEMPLATE . explode('controller', strtolower((new \ReflectionClass($this))->getShortName()))[0];
+
+            ob_start();
+            if(!include_once $path . '.php') throw new RouteException(' Ошибка загрузки шаблона: ' . $path);
+            return ob_get_clean();
+
+        }
     }
 
-    #[NoReturn] protected function getPage(): void
+    protected function getPage()
     {
         exit($this->page);
     }

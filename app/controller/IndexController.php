@@ -19,5 +19,21 @@ class IndexController extends Controller
                   </br> '.
             '</pre>';
     }
+    public function hello()
+    {
+        $template = $this->render(false, ['name'=>'Я страница сайта - метод: hello']);
+        exit($template);
+    }
+
+    public function inputData()
+    {
+        $template = $this->render(false, ['name'=>'Я страница сайта - метод: inputData']);
+        exit($template);
+    }
+
+    public function outputData ()
+    {
+
+    }
 
 }

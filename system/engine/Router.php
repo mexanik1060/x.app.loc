@@ -94,14 +94,14 @@ class Router extends Controller
 
             $this->createRoute($route, $url);
 
-            if ($url[1]) {
+            if ($url[0]) {
                 $count = count($url);
                 $key = '';
 
                 if (!$hrUrl) {
                     $i = 1;
                 } else {
-                    $this->parameters['alias'] = $url[1];
+                    $this->parameters['alias'] = $url[0];
                     $i = 2;
                 }
                 for (; $i < $count; $i++) {

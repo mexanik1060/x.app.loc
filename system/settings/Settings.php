@@ -36,6 +36,7 @@ class Settings
                     'path' => 'app/controller/',
                     'hrUrl' => true,
                     'routes' => [
+                        'site' => 'index/hello'
                         //'папка' => 'alias/входные данные/выходные двнные в шаблон'
                         //'personnel' => 'Test',
 
